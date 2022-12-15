@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7119179119774671743}
   - component: {fileID: 8434663833217804307}
   - component: {fileID: 8434663833217804306}
+  - component: {fileID: 6146041518324727402}
   m_Layer: 0
   m_Name: microwave
   m_TagString: Untagged
@@ -114,3 +115,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29999998, y: 0.16999999, z: 0.19999999}
   m_Center: {x: 0.000000044703484, y: -0.014999878, z: 0}
+--- !u!114 &6146041518324727402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8776561025058308778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5cec5048daa2e4794923ba51d930ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

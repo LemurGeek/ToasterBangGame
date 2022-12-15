@@ -21,7 +21,7 @@ PrefabInstance:
         type: 3}
       propertyPath: collectibles.Array.data[0]
       value: 
-      objectReference: {fileID: 4970622615290002675, guid: e3d4e328af13c1a41993bbff2102172a,
+      objectReference: {fileID: 7618011354438247562, guid: e3d4e328af13c1a41993bbff2102172a,
         type: 3}
     - target: {fileID: 6604837192767665804, guid: a9576761552f4c44caad0c2ae0d4c4d0,
         type: 3}

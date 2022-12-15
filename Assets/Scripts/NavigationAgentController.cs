@@ -25,6 +25,7 @@ public class NavigationAgentController : MonoBehaviour
     bool isAttacking;
     void Start()
     {
+        target = GameObject.Find("PlayerCapsule").transform;
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.updateRotation = false;
         counterAttack = GetComponent<CounterAttackController>();
@@ -33,6 +34,7 @@ public class NavigationAgentController : MonoBehaviour
     }
     void Update()
     {
+        target = GameObject.Find("PlayerCapsule").transform;
         distanceToTarget = Vector3.Distance(transform.position, target.position);
         chaseTarget = (distanceToTarget <= chaseRange);
         if (chaseTarget)

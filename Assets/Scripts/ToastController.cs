@@ -16,4 +16,9 @@ public class ToastController : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void OnTriggerEnter(Collider other)
+    {
+
+        
+    }
 }

@@ -5569,8 +5569,19 @@ PrefabInstance:
     - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
         type: 3}
       propertyPath: spawnTimeFrame
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.data[1]
+      value: 
+      objectReference: {fileID: 7618011354438247562, guid: f450a440ac2ec754e93b664f3c287f6e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d82318e4d4d6498fc8ff0276503cf, type: 3}
 --- !u!1 &701367036
@@ -9902,8 +9913,19 @@ PrefabInstance:
     - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
         type: 3}
       propertyPath: spawnTimeFrame
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.data[1]
+      value: 
+      objectReference: {fileID: 7618011354438247562, guid: f450a440ac2ec754e93b664f3c287f6e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d82318e4d4d6498fc8ff0276503cf, type: 3}
 --- !u!1001 &1222815495
@@ -11005,8 +11027,19 @@ PrefabInstance:
     - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
         type: 3}
       propertyPath: spawnTimeFrame
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569493339223248074, guid: 355d82318e4d4d6498fc8ff0276503cf,
+        type: 3}
+      propertyPath: collectibles.Array.data[1]
+      value: 
+      objectReference: {fileID: 7618011354438247562, guid: f450a440ac2ec754e93b664f3c287f6e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d82318e4d4d6498fc8ff0276503cf, type: 3}
 --- !u!1001 &1360228041

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1799585852959930423}
   m_Layer: 0
   m_Name: BigToast
-  m_TagString: Toast
+  m_TagString: BigToast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

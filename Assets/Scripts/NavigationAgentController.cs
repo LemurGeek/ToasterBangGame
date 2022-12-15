@@ -11,7 +11,9 @@ public class NavigationAgentController : MonoBehaviour
     [SerializeField]
     float chaseRange = 5.0F;
     [SerializeField]
-    float rotationSpeed = 2.5F;
+    float rotationSpeed = 2.5F;  
+    [SerializeField]
+    float chaseSpeed = 5F;
     [ReadOnly]
     [SerializeField]
     float distanceToTarget;
@@ -27,6 +29,7 @@ public class NavigationAgentController : MonoBehaviour
     {
         target = GameObject.Find("PlayerCapsule").transform;
         navAgent = GetComponent<NavMeshAgent>();
+        navAgent.speed = chaseSpeed;
         navAgent.updateRotation = false;
         counterAttack = GetComponent<CounterAttackController>();
         counterAttack.OnAttackEnded.AddListener(OnAttackEnded);

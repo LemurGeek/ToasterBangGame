@@ -5,13 +5,22 @@ using UnityEngine;
 public class ShootController : MonoBehaviour
 {
     [SerializeField]
-    Transform toastSpawnPoint;
+    Transform primaryToastSpawnPoint;
+
+    [SerializeField]
+    Transform secundaryToastSpawnPoint;
 
     [SerializeField]
     GameObject[] toastPrefab;
 
     [SerializeField]
     float toastSpeed = 10.0F;
+
+    [SerializeField]
+    float shootRate = 0.5F;
+
+    [SerializeField]
+    float nextShoot = 0.5F;
 
     ToastManager toastManager;
 
@@ -22,31 +31,39 @@ public class ShootController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire1") && Time.time > nextShoot)
         {
+            nextShoot = Time.time + shootRate;
             ShootToast();
         }
     }
 
     void ShootToast()
     {
-        GameObject toast;
+        GameObject primaryToast;
+        GameObject secundaryToast;
 
         switch (toastManager.GetToastType())
         {
             case ToastTypes.NORMAL:
-                toast = Instantiate(toastPrefab[0], toastSpawnPoint.position, toastSpawnPoint.rotation);
+                primaryToast = Instantiate(toastPrefab[0], primaryToastSpawnPoint.position, primaryToastSpawnPoint.rotation);
+                secundaryToast = Instantiate(toastPrefab[0], secundaryToastSpawnPoint.position, secundaryToastSpawnPoint.rotation);
                 break;
             case ToastTypes.BIGTOAST:
-                toast = Instantiate(toastPrefab[1], toastSpawnPoint.position, toastSpawnPoint.rotation);
+                primaryToast = Instantiate(toastPrefab[1], primaryToastSpawnPoint.position, primaryToastSpawnPoint.rotation);
+                secundaryToast = Instantiate(toastPrefab[1], secundaryToastSpawnPoint.position, secundaryToastSpawnPoint.rotation);
                 break;
             default:
-                toast = Instantiate(toastPrefab[0], toastSpawnPoint.position, toastSpawnPoint.rotation);
+                primaryToast = Instantiate(toastPrefab[0], primaryToastSpawnPoint.position, primaryToastSpawnPoint.rotation);
+                secundaryToast = Instantiate(toastPrefab[0], secundaryToastSpawnPoint.position, secundaryToastSpawnPoint.rotation);
                 break;
         }
 
-        Rigidbody rb = toast.GetComponent<Rigidbody>();
+        Rigidbody rbPT = primaryToast.GetComponent<Rigidbody>();
+        Rigidbody rbST = secundaryToast.GetComponent<Rigidbody>();
 
-        rb.AddForce(toastSpawnPoint.forward * toastSpeed, ForceMode.Impulse);
+        rbPT.AddForce(primaryToastSpawnPoint.forward * toastSpeed, ForceMode.Impulse);
+        rbST.AddForce(secundaryToastSpawnPoint.forward * toastSpeed, ForceMode.Impulse);
     }
 }

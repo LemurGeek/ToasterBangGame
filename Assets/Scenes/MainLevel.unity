@@ -1645,6 +1645,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 236769221}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &238876070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238876071}
+  m_Layer: 3
+  m_Name: ToastSpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238876071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238876070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35229158, y: 1.170913, z: 1.2928371}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 937451010642448800}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &247445176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4133,7 +4164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557316306}
   m_Layer: 3
-  m_Name: ToastSpawnPoint
+  m_Name: ToastSpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4147,7 +4178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557316305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26991415, y: 1.1709445, z: 1.2281189}
+  m_LocalPosition: {x: 0.26991343, y: 1.1709445, z: 1.228118}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15309,10 +15340,10 @@ Transform:
   - {fileID: 931042277}
   - {fileID: 1076069266}
   - {fileID: 547767404}
+  - {fileID: 1626603447}
   - {fileID: 544524068}
   - {fileID: 377240276}
   - {fileID: 1599596105}
-  - {fileID: 1626603447}
   - {fileID: 1992220036}
   - {fileID: 456503679}
   - {fileID: 768382405}
@@ -16658,6 +16689,7 @@ Transform:
   - {fileID: 5242107655260549702}
   - {fileID: 4253012992396123919}
   - {fileID: 557316306}
+  - {fileID: 238876071}
   m_Father: {fileID: 6556307556563856498}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17474,11 +17506,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8178da1ce3c96641a0836613a562ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toastSpawnPoint: {fileID: 1860262020}
+  primaryToastSpawnPoint: {fileID: 557316306}
+  secundaryToastSpawnPoint: {fileID: 238876071}
   toastPrefab:
   - {fileID: 4135157284427168265, guid: 82ba38d27703c5346bf36f560f466d50, type: 3}
   - {fileID: 4135157284427168265, guid: 8cbeb4b21ec27b74986d8adc295c42ac, type: 3}
   toastSpeed: 2
+  shootRate: 0.5
+  nextShoot: 0.5
 --- !u!114 &7094977339072675556
 MonoBehaviour:
   m_ObjectHideFlags: 0

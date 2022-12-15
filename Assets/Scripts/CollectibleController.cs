@@ -6,7 +6,6 @@ using UnityEngine;
 public class CollectibleController : MonoBehaviour
 {
     [SerializeField]
-
     CollectibleTypes collectibleType;
 
     [SerializeField]
@@ -24,6 +23,7 @@ public class CollectibleController : MonoBehaviour
 
     HealthStatusController healthStatus;
 
+    ToastManager toastManager;
 
     private void Start()
     {
@@ -31,8 +31,7 @@ public class CollectibleController : MonoBehaviour
         Destroy(gameObject, lifeTime);
         healthStatus = FindObjectOfType<HealthStatusController>();
 
-
-
+        toastManager = ToastManager.GetInstancia() as ToastManager;
     }
 
     private void Update()
@@ -44,20 +43,20 @@ public class CollectibleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Console.WriteLine("PLAYER");
+            Debug.Log("PLAYER");
             isExpired = false;
             Destroy(gameObject);
 
-            //if (this.collectibleType.ToString().Equals("POISON"))
-            //{
-            //    session.AddScore(expireValue);
-            //}
-
-            //Me gustaria cambiar el nombre a food o apple
-            if (this.collectibleType.ToString().Equals("HEALTH"))
-
+            if (this.collectibleType.ToString().Equals("POWERUP"))
             {
-                Console.WriteLine("HEALTH");
+                Debug.Log("POWERUP");
+                toastManager.SetToastType(ToastTypes.BIGTOAST);
+                Debug.Log(toastManager.GetToastType());
+            }
+
+            if (this.collectibleType.ToString().Equals("HEALTH"))
+            {
+                Debug.Log("HEALTH");
             }
         }
     }

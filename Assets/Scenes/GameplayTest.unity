@@ -1473,6 +1473,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1532075436274159253, guid: db7e38252c054854bac76f93f247e18f,
+        type: 3}
+      propertyPath: collectibles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532075436274159253, guid: db7e38252c054854bac76f93f247e18f,
+        type: 3}
+      propertyPath: collectibles.Array.data[1]
+      value: 
+      objectReference: {fileID: 8423861950433995907, guid: 9f7ee46b4775c794d9a3d32fa5036830,
+        type: 3}
     - target: {fileID: 5035224512916183464, guid: db7e38252c054854bac76f93f247e18f,
         type: 3}
       propertyPath: m_Name
@@ -2172,6 +2183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6556307556563856498}
   - component: {fileID: 7094977339072675555}
+  - component: {fileID: 7094977339072675556}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -2192,9 +2204,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toastSpawnPoint: {fileID: 1860262020}
-  toastPrefab: {fileID: 4135157284427168265, guid: 82ba38d27703c5346bf36f560f466d50,
-    type: 3}
+  toastPrefab:
+  - {fileID: 4135157284427168265, guid: 82ba38d27703c5346bf36f560f466d50, type: 3}
+  - {fileID: 4135157284427168265, guid: 8cbeb4b21ec27b74986d8adc295c42ac, type: 3}
   toastSpeed: 2
+--- !u!114 &7094977339072675556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094977339072675554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85c872efcfd59140aee0a45306b88fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toast_type: 0
 --- !u!114 &7685886780417450474
 MonoBehaviour:
   m_ObjectHideFlags: 0

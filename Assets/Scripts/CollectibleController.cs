@@ -56,6 +56,7 @@ public class CollectibleController : MonoBehaviour
 
             if (this.collectibleType.ToString().Equals("HEALTH"))
             {
+                healthStatus.Heal(10);
                 Debug.Log("HEALTH");
             }
         }

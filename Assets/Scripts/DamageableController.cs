@@ -11,7 +11,7 @@ public class DamageableController : MonoBehaviour
 
      void Start()
     {
-     healthStatus = FindObjectOfType<HealthStatusController>();
+        healthStatus = FindObjectOfType<HealthStatusController>();
         healthStatus.onHealthChanged.AddListener(OnHealthChanged);
         healthStatus.onDie.AddListener(OnDie);
 
@@ -19,6 +19,8 @@ public class DamageableController : MonoBehaviour
 
     void OnHealthChanged(float health)
     {
+        healthStatus.Damage(10);
+        Debug.Log("Pichazo");
     }
 
     void OnDie()

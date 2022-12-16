@@ -12,6 +12,9 @@ public class HealthStatusController : MonoBehaviour
     [SerializeField]
     Slider healthBar;
 
+    [SerializeField]
+    GameObject DeathUI;
+
     float currentHealth;
 
     [HideInInspector]
@@ -33,6 +36,7 @@ public class HealthStatusController : MonoBehaviour
         if (currentHealth <= 0.0) {
             currentHealth = 0.0F;
             onDie.Invoke();
+            DeathUI.SetActive(true);
         }
         healthBar.value = currentHealth;
     }

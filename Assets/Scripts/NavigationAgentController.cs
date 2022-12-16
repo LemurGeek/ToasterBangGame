@@ -24,6 +24,7 @@ public class NavigationAgentController : MonoBehaviour
     Animator animator;
 
     CounterAttackController counterAttack;
+    HealthStatusController statusController;
     bool isAttacking;
     void Start()
     {
@@ -32,6 +33,7 @@ public class NavigationAgentController : MonoBehaviour
         navAgent.speed = chaseSpeed;
         navAgent.updateRotation = false;
         counterAttack = GetComponent<CounterAttackController>();
+        statusController = FindObjectOfType<HealthStatusController>();
         counterAttack.OnAttackEnded.AddListener(OnAttackEnded);
         //animator = GetComponentInChildren<Animator>();
     }
@@ -81,6 +83,8 @@ public class NavigationAgentController : MonoBehaviour
         }
         isAttacking = true;
         //animator.SetTrigger("attack");
+        Debug.Log("Attack");
+        statusController.Damage(10);
         StartCoroutine(counterAttack.Attack());
     }
     void StopFollowingTarget()
